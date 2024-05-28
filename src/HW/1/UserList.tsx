@@ -1,18 +1,3 @@
-type AddressType = {
-  street: string; // ПОДПРАВЛЯЕМ any
-  city: string; // ПОДПРАВЛЯЕМ any
-};
-
-type UserType = {
-  id: number
-  name: string
-  age: number
-  address: AddressType // ПРИДЕТСЯ САМОМУ)
-};
-
-type UserListPropsType = {
-  users: Array<UserType>; // ПО МОЕМУ ЧЕГО-ТО НЕ ХВАТАЕТ...
-};
 
 export const UserList = (props: UserListPropsType) => {
   return (
@@ -28,4 +13,20 @@ export const UserList = (props: UserListPropsType) => {
       </ul>
     </div>
   );
+};
+
+type AddressType = {
+    street: string; // ПОДПРАВЛЯЕМ any
+    city: string; // ПОДПРАВЛЯЕМ any
+};
+
+type UserType = {
+    id: number
+    name: string
+    age: number
+    address: AddressType // ПРИДЕТСЯ САМОМУ)
+};
+
+type UserListPropsType = {
+    users: Array<UserType>; // ПО МОЕМУ ЧЕГО-ТО НЕ ХВАТАЕТ...
 };
